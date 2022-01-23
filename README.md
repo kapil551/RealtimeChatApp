@@ -6,4 +6,12 @@
 
 3. Resources Used:
 
+    - ```FlatList``` in react-native.
+
+    - ```ListHeaderComponent``` props of FlatList:
+
+        - Using it to ```show more than one``` flatList?
+
+    
+
     

@@ -3,10 +3,12 @@ import { Text, View, Image } from "react-native";
 
 import styles from "./ChatRoomItemStyles";
 
-const ChatRoomItem = () => {
+const ChatRoomItem = ({ chatRoom }) => {
+  // console.log(chatRoom);
+
+  const user = chatRoom.users[1];
 
   return (
-
     // ChatRoomItem
     <View style={styles.container}>
       <View style={styles.badgeContainer}>
@@ -15,18 +17,18 @@ const ChatRoomItem = () => {
 
       <Image
         source={{
-          uri: "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/elon.png",
+          uri: user.imageUri,
         }}
         style={styles.image}
       />
 
       <View style={styles.rightContainer}>
         <View style={styles.row}>
-          <Text style={styles.name}>Elon Musk</Text>
-          <Text style={styles.text}>11.11 AM</Text>
+          <Text style={styles.name}>{user.name}</Text>
+          <Text style={styles.text}>{chatRoom.lastMessage.createdAt}</Text>
         </View>
         <Text numberOfLines={1} style={styles.text}>
-          Hola message fjdgiogndfpndofpjgoptjgodjodfpjgpodfjgpojgkdpkd
+          {chatRoom.lastMessage.content}
         </Text>
       </View>
     </View>

@@ -6,8 +6,20 @@ import Message from "../components/Message/Message";
 // import the dummy data
 import chatRoomData from "../assets/dummy-data/Chats";
 import MessageInput from "../components/MessageInput/MessageInput";
+import { useNavigation, useRoute } from "@react-navigation/native";
 
 const ChatRoomScreen = () => {
+
+  const route = useRoute();
+  const navigation = useNavigation();
+
+  console.log(route);
+  console.warn("Displaying Chat room: ", route.params?.id);
+
+  navigation.setOptions({ title: 'Elon Musk' });
+
+  
+
   return (
 
     <SafeAreaView style={styles.page}>

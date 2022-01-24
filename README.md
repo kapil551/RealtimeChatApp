@@ -14,6 +14,14 @@
 
     - ```inverted``` props of FlatList:
 
+    - ```SafeAreaView``` component in react-native
+
+    - ```KeyboardAvoidingView``` component in react-native
+
+    - ```TextInput``` component in react-native
+
+    - ```Pressable``` component in react-native
+
     
 
     

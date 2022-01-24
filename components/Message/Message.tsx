@@ -1,14 +1,20 @@
-import { View, Text } from 'react-native';
-import React from 'react';
+import { View, Text } from "react-native";
+import React from "react";
 
-import styles from './MessageStyles';
+import styles from "./MessageStyles";
 
-const Message = ( { message }) => {
+const myID = "u1";
 
-    console.log(message);
+const Message = ({ message }) => {
+    //console.log(message);
+
+  const isMe = message.user.id === myID;
+    //console.log(isMe);
+
   return (
-    <View>
-      <Text> { message.content } </Text>
+
+    <View style={[ styles.container, isMe ? styles.rightContainer : styles.leftContainer ]}>
+      <Text style={{ color: isMe ? 'black' : 'white' }}> {message.content} </Text>
     </View>
   );
 };

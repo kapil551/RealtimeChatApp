@@ -12,6 +12,8 @@
 
         - Using it to ```show more than one``` flatList?
 
+    - ```inverted``` props of FlatList:
+
     
 
     

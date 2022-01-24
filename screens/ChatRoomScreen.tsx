@@ -13,12 +13,10 @@ const ChatRoomScreen = () => {
   const route = useRoute();
   const navigation = useNavigation();
 
-  console.log(route);
-  console.warn("Displaying Chat room: ", route.params?.id);
+  // console.log(route);
+  // console.warn("Displaying Chat room: ", route.params?.id);
 
   navigation.setOptions({ title: 'Elon Musk' });
-
-  
 
   return (
 
